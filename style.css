@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Urbanist", sans-serif;
+  transition: ease;
+  transition-duration: 400ms;
+}
+body {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  margin: 15px;
+  color: #303030;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.taskText {
+  width: 24rem;
+  height: 3rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.taskText p {
+  font-size: 18px;
+  margin-left: 13px;
+  color: #505050;
+}
+.taskComplete {
+  height: 3rem;
+  width: 3rem;
+  background-color: #09bca8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.taskComplete img {
+  width: 2rem;
+}
+.taskComplete:hover img.active {
+  width: 2.4rem;
+}
+.taskDelete {
+  height: 3rem;
+  width: 3rem;
+  background-color: #ff4365;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.taskDelete img {
+  width: 1.6rem;
+}
+.taskDelete:hover img {
+  width: 2rem;
+}
+.newTask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.newTask input {
+  width: 30rem;
+  border: 0;
+  height: 3rem;
+  background-color: white;
+  padding-left: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+button {
+  width: 30rem;
+  height: 3rem;
+  background-color: #09bca8;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  counter-reset: #505050;
+  margin-bottom: 5px;
+}
+button:hover {
+  background-color: #0bd8c0;
+}
+.inactive p {
+  color: #a0a0a0;
+}
+.inactive .taskText,
+.inactive .taskComplete {
+  background-color: #ffffff41;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .taskText {
+    width: 80vw;
+    height: 10vw;
+  }
+  .taskComplete,
+  .taskDelete {
+    width: 10vw;
+    height: 10vw;
+  }
+  .newTask input,
+  button {
+    width: 100vw;
+    height: 10vw;
+  }
+}
